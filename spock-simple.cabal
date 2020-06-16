@@ -1,0 +1,108 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 908afa1087fe71fe50fa8e34ff739ab95a6174d171d48e8657620bf1bc35a7f3
+
+name:           spock-simple
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/spock-simple#readme>
+homepage:       https://github.com/githubuser/spock-simple#readme
+bug-reports:    https://github.com/githubuser/spock-simple/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/spock-simple
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_spock_simple
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wno-name-shadowing -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances -Wno-orphans
+  build-depends:
+      Spock
+    , aeson
+    , base >=4.7 && <5
+    , blaze-html
+    , bytestring
+    , configurator
+    , containers
+    , fast-logger
+    , http-types
+    , postgresql-simple
+    , raw-strings-qq
+    , resource-pool
+    , text
+    , time
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
+
+executable spock-simple-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_spock_simple
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wno-name-shadowing -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances -Wno-orphans -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Spock
+    , aeson
+    , base >=4.7 && <5
+    , blaze-html
+    , bytestring
+    , configurator
+    , containers
+    , fast-logger
+    , http-types
+    , postgresql-simple
+    , raw-strings-qq
+    , resource-pool
+    , spock-simple
+    , text
+    , time
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
+
+test-suite spock-simple-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_spock_simple
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wno-name-shadowing -Wcompat -Wincomplete-record-updates -Wincomplete-uni-patterns -Wredundant-constraints -Wnoncanonical-monad-instances -Wno-orphans -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Spock
+    , aeson
+    , base >=4.7 && <5
+    , blaze-html
+    , bytestring
+    , configurator
+    , containers
+    , fast-logger
+    , http-types
+    , postgresql-simple
+    , raw-strings-qq
+    , resource-pool
+    , spock-simple
+    , text
+    , time
+    , unordered-containers
+    , vector
+  default-language: Haskell2010
